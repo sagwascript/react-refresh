@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +9,27 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background: indigo;
+  margin: 0 auto;
+  color: white;
+}
+
+.circle span, .box span {
+  display: inline-block;
+  margin: 70px auto;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background: aqua;
+  margin: 0 auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {

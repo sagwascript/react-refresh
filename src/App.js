@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import MouseTracker from "./MouseTracker";
+import Box from "./Box";
+import Circle from "./Circle";
 
 function App() {
+  // it's just away to share behavior
+  // MouseTracker send the state of specific behavior as the function argument
+  // passed in props named `render` in this case -- we can use other name of course --
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MouseTracker background="tomato" render={data => <Box mouse={data} />} />
+      <MouseTracker
+        background="#EFE"
+        render={data => <Circle mouse={data} />}
+      />
     </div>
   );
 }
