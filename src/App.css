@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+.counter {
+  background: indigo;
+  color: white;
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+.box {
+  background: salmon;
+  height: 200px;
+  width: 200px;
+  padding: 5px;
+  margin: 10px auto;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
