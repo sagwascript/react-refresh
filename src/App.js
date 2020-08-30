@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import MoiButton from "./MoiButton";
+import MoiInput from "./MoiInput";
 
 function App() {
+  // get child ref passed by `el` argument
+  function disableButton(el) {
+    // disable button using DOM API
+    el.disabled = true;
+  }
+
+  function focus(el) {
+    // do something to the DOM by the ref
+    if (el) el.focus();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MoiButton setRef={disableButton} style={{ fontSize: 24 }}>
+        Click Me!
+      </MoiButton>
+      {/** directly access ref **/}
+      <MoiInput ref={focus} />
     </div>
   );
 }
